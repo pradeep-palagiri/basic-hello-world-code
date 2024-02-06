@@ -1,0 +1,39 @@
+name: Build and Deploy
+ 
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+ 
+      - name: Build Application
+        run: |
+          # Add commands to build your application
+          # For example, npm install, pip install, or any other build commands
+ 
+  deploy_dev:
+    needs: build
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Deploy to Development
+        run: |
+          # Add commands to deploy to your development environment
+          # For example, copying files, starting a server, etc.
+ 
+  deploy_prod:
+    needs: build
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Deploy to Production
+        run: |
+          # Add commands to deploy to your production environment
+          # It could involve additional steps like setting up database connections, configuring environment variables, etc.
