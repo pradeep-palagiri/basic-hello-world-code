@@ -57,13 +57,3 @@ jobs:
           # Add commands to deploy to your production environment
           # It could involve additional steps like setting up database connections, configuring environment variables, etc.
 
-
-    steps:
-    
-    - uses: trstringer/manual-approval@v1
-      timeout-minutes: 15
-      with:
-        approvers: 
-        minimum-approvals: 1
-        issue-title: "Deploying to prod"
-        issue-body: "Please approve or deny the deployment"
