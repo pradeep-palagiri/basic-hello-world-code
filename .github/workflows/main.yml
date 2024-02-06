@@ -57,3 +57,9 @@ jobs:
           # Add commands to deploy to your production environment
           # It could involve additional steps like setting up database connections, configuring environment variables, etc.
 
+            steps:
+              - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: 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
+                     approvers: pradeep-palagiri
+
